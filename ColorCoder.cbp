@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ColorCoder" />
+		<Option platforms="Windows;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="..\..\..\devel\share\CodeBlocks\plugins\ColorCoder" prefix_auto="1" extension_auto="1" />
+				<Option object_output="..\..\..\.objs\plugins\contrib\" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option parameters="--debug-log --no-check-associations -ns -nd" />
+				<Option host_application="..\..\..\devel\codeblocks.exe" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="-pipe" />
+					<Add option="-mthreads" />
+					<Add option="-fmessage-length=0" />
+					<Add option="-fexceptions" />
+					<Add option="-Winvalid-pch" />
+					<Add option='-include &quot;wx_pch.h&quot;' />
+					<Add option="-DBUILDING_PLUGIN" />
+					<Add option="-DHAVE_W32API_H" />
+					<Add option="-D__WXMSW__" />
+					<Add option="-DWXUSINGDLL" />
+					<Add option="-DcbDEBUG" />
+					<Add option="-DCB_PRECOMP" />
+					<Add option="-DWX_PRECOMP" />
+					<Add option="-DwxUSE_UNICODE" />
+					<Add option="-DWXMAKINGDLL_PROPGRID" />
+					<Add option="-DwxPG_USE_WXMODULE=0" />
+					<Add directory="..\..\..\include" />
+					<Add directory="..\..\..\sdk\wxscintilla\include" />
+					<Add directory="$(#wx.include)" />
+					<Add directory="$(#wx.lib)" />
+					<Add directory="$(#wx.lib)\gcc_dll$(WX_CFG)\msw$(WX_SUFFIX)" />
+				</Compiler>
+				<Linker>
+					<Add library="codeblocks" />
+					<Add library="wxmsw$(WX_VERSION)$(WX_SUFFIX)" />
+					<Add directory="..\..\..\devel" />
+					<Add directory="$(#wx.lib)" />
+					<Add directory="$(#wx.lib)\gcc_dll$(WX_CFG)" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="zip -j9 ..\..\..\devel\share\codeblocks\ColorCoder.zip manifest.xml" />
+					<Add after="update.bat" />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+			<Environment>
+				<Variable name="WX_SUFFIX=u" value="" />
+				<Variable name="WX_SUFFIX" value="u" />
+				<Variable name="WX_VERSION" value="28" />
+				<Variable name="WX_CFG" value="" />
+			</Environment>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Unit filename="HTMLcolors.h" />
+		<Unit filename="ccCommons.cpp" />
+		<Unit filename="ccCommons.h" />
+		<Unit filename="ccGui.cpp" />
+		<Unit filename="ccGui.h" />
+		<Unit filename="ccMain.cpp" />
+		<Unit filename="ccMain.h" />
+		<Unit filename="ccSetup.cpp" />
+		<Unit filename="ccSetup.h" />
+		<Unit filename="cc__wxFB.cpp" />
+		<Unit filename="cc__wxFB.fbp" />
+		<Unit filename="cc__wxFB.h" />
+		<Unit filename="manifest.xml" />
+		<Unit filename="wx_pch.h">
+			<Option compile="1" />
+			<Option weight="0" />
+		</Unit>
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_plugin_manifest_file>
+    <SdkVersion major="1" minor="11"  release="12" />
+    <Plugin name="ColorCoder">
+        <Value title="ColorCoder" />
+        <Value version="1.0.1" />
+        <Value description="
+This is an extended and configurable colour picker, that lets you to select a colour from the standard picker or from a list of HTML names, then format and insert it to the cursor position.
+
+Moreover, ColorCoder dialog can remain openend and always visible if you wish, so that you could add more colours in a row while editing your document." />
+        <Value author="Deschamps" />
+        <Value authorEmail="deschamps@primi.net" />
+        <Value authorWebsite="" />
+        <Value thanksTo="
+All the Code::Blocks team (developers,
+maintainers, contributors, ...) involved
+in this wonderful tool.
+
+Also to the wxFormBuilder developers,
+for doing a nice and efficient
+wxWidgets GUI builder." />
+        <Value license="GNU GPL v3 or later" />
+    </Plugin>
+</CodeBlocks_plugin_manifest_file>

@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes" ?>
+<CodeBlocks_project_file>
+	<FileVersion major="1" minor="6" />
+	<Project>
+		<Option title="ColorCoder (Unix)" />
+		<Option platforms="Unix;Mac;" />
+		<Option pch_mode="2" />
+		<Option compiler="gcc" />
+		<Build>
+			<Target title="default">
+				<Option output="../../../devel/share/codeblocks/plugins/libColorCoder" prefix_auto="1" extension_auto="1" />
+				<Option object_output="../../../.objs/plugins/contrib/" />
+				<Option type="3" />
+				<Option compiler="gcc" />
+				<Option host_application="codeblocks" />
+				<Compiler>
+					<Add option="-Wall" />
+					<Add option="-g" />
+					<Add option="`pkg-config --cflags codeblocks`" />
+					<Add option="`wx-config --cflags`" />
+					<Add option="-fPIC" />
+					<Add directory="/usr/local/include/codeblocks" />
+				</Compiler>
+				<Linker>
+					<Add option="`pkg-config --libs codeblocks`" />
+					<Add option="`wx-config --libs`" />
+				</Linker>
+				<ExtraCommands>
+					<Add after="zip -j9 ../../../devel/share/codeblocks/ColorCoder.zip manifest.xml" />
+					<Add after="./update" />
+					<Mode after="always" />
+				</ExtraCommands>
+			</Target>
+		</Build>
+		<VirtualTargets>
+			<Add alias="All" targets="default;" />
+		</VirtualTargets>
+		<Unit filename="HTMLcolors.h" />
+		<Unit filename="ccCommons.cpp" />
+		<Unit filename="ccCommons.h" />
+		<Unit filename="ccGui.cpp" />
+		<Unit filename="ccGui.h" />
+		<Unit filename="ccMain.cpp" />
+		<Unit filename="ccMain.h" />
+		<Unit filename="ccSetup.cpp" />
+		<Unit filename="ccSetup.h" />
+		<Unit filename="cc__wxFB.cpp" />
+		<Unit filename="cc__wxFB.fbp">
+			<Option target="&lt;{~None~}&gt;" />
+		</Unit>
+		<Unit filename="cc__wxFB.h" />
+		<Unit filename="manifest.xml" />
+		<Extensions>
+			<code_completion />
+			<envvars />
+			<debugger />
+		</Extensions>
+	</Project>
+</CodeBlocks_project_file>
